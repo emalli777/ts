@@ -9,7 +9,12 @@
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
     "target": "esnext",
-    "types": [],
+    "types": ["node", "jest"],
+    
+    // jest config
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -35,10 +40,11 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
+   // "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include": ["src/**/*.ts", "tests/**/*.ts"] // Include your source and test files
 }

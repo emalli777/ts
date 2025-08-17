@@ -24,3 +24,18 @@ setup node project
 
 6. npm run build  -- compile
    npm start    -- run the compiled output
+
+   # export key word
+      npm i --save-dev @types/node   
+       "types": ["node"],  -- tsconfig.json for mdule export
+       //"verbatimModuleSyntax": true,  -- tsconfig.json --for function export individual 
+
+7. jest config 
+             npm install --save-dev typescript jest @types/jest ts-jest
+             "include": ["src/**/*.ts", "tests/**/*.ts"] //tscongig.json
+        npx ts-jest config:init  -- it will create jest.config.js or .ts
+        
+        package.json
+        "scripts": {
+    "test": "jest",  /// add this line
+     ..............
